@@ -1,6 +1,6 @@
 {
   "name": "@monorepo/adder",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
@@ -13,6 +13,6 @@
   "license": "ISC",
   "dependencies": {
     "@monorepo/one": "workspace:^1.0.0",
-    "@monorepo/two": "workspace:^1.0.0"
+    "@monorepo/two": "workspace:^2.0.0"
   }
 }

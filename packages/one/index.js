@@ -1,2 +1,5 @@
 const addOne = (x) => x + 1;
-export default addOne;
+
+const addTwo = (x) => x + 2;
+
+export default { addOne, addTwo };

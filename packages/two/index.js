@@ -1,7 +1,10 @@
 /**
  * addTwo(a, b)
- * @param {*} x 
- * @returns 
+ * @param {*} x
+ * @returns
  */
 const addTwo = (x) => x + 2;
-export default addTwo;
+
+const subTwo = (x) => x - 2;
+
+export default { addTwo, subTwo };
