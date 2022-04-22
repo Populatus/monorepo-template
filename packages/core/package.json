@@ -1,0 +1,12 @@
+{
+  "name": "@saga/core",
+  "version": "1.0.0",
+  "description": "",
+  "sideEffects": false,
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@saga/shared": "workspace:^1.0.0"
+  }
+}

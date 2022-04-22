@@ -1,0 +1,9 @@
+{
+  "name": "@saga/shared",
+  "version": "1.0.0",
+  "description": "",
+  "sideEffects": false,
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

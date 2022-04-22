@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "esnext",
+    "lib": [
+      "ESNext",
+      "DOM",
+    ],
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "declaration": true,
+    "declarationDir": "./types",
+    "resolveJsonModule": true,
+    "rootDir": ".",
+    "baseUrl": ".",
+    "jsx": "preserve",
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "noUnusedLocals": true,
+  },
+  "paths": {
+    "@monorepo/adder": [
+      "./packages/adder/index.ts"
+    ],
+    "@monorepo/one": [
+      "./packages/one/index.ts"
+    ],
+    "@monorepo/two": [
+      "./packages/two/index.ts"
+    ],
+  },
+  "include": [
+    "packages",
+  ],
+  "exclude": [
+    "node_modules",
+    "**/dist",
+  ]
+}

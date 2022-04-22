@@ -1,0 +1,12 @@
+{
+  "name": "@saga/metadata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "update": "esno scripts/update.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
