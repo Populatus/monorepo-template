@@ -18,11 +18,11 @@ export interface PackageManifest {
   utils?: boolean
   copy?: string[]
 }
-export interface SagaPackage extends PackageManifest {
+export interface cxyggPackage extends PackageManifest {
   dir: string
   docs?: string
 }
 
 export interface PackageIndexes {
-  packages: Record<string, SagaPackage>
+  packages: Record<string, cxyggPackage>
 }

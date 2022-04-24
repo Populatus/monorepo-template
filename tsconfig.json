@@ -14,23 +14,29 @@
     "declaration": true,
     "declarationDir": "./types",
     "resolveJsonModule": true,
-    "rootDir": ".",
-    "baseUrl": ".",
+    "rootDir": "./",
+    "baseUrl": "./",
     "jsx": "preserve",
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "noUnusedLocals": true,
   },
   "paths": {
-    "@monorepo/adder": [
-      "./packages/adder/index.ts"
+    "@cxygg/core": [
+      "./packages/core/index.ts"
     ],
-    "@monorepo/one": [
-      "./packages/one/index.ts"
+    "@cxygg/core/*": [
+      "./packages/core/*"
     ],
-    "@monorepo/two": [
-      "./packages/two/index.ts"
+    "@cxygg/metadata": [
+      "./packages/metadata/index.ts"
     ],
+    "@cxygg/shared": [
+      "./packages/shared/index.ts"
+    ],
+    "@cxygg/shared/*": [
+      "./packages/shared/*"
+    ]
   },
   "include": [
     "packages",

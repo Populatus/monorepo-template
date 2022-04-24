@@ -1,12 +1,29 @@
 {
-  "name": "@saga/core",
-  "version": "1.0.0",
+  "name": "@cxygg/core",
+  "version": "1.0.2",
   "description": "",
-  "sideEffects": false,
   "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "@saga/shared": "workspace:^1.0.0"
-  }
+  "author": "Cxygg <https://github.com/cxygg>",
+  "main": "./index.cjs",
+  "module": "./index.mjs",
+  "types": "./index.d.ts",
+  "unpkg": "./index.iife.min.js",
+  "jsdelivr": "./index.iife.min.js",
+  "license": "MIT",
+  "sideEffects": false,
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cxygg/saga_monorepo.git",
+    "directory": "packages/core"
+  },
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.cjs",
+      "types": "./index.d.ts"
+    },
+    "./*": "./*"
+  },
+  "homepage": "https://github.com/cxygg/saga_monorepo"
 }

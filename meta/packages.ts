@@ -28,14 +28,14 @@ export const packages: PackageManifest[] = [
   //   name: 'components',
   //   display: 'Components',
   //   external: [
-  //     '@saga/core',
-  //     '@saga/shared',
+  //     '@cxygg/core',
+  //     '@cxygg/shared',
   //   ],
   // },
 
   {
     name: 'core',
-    display: 'Saga',
+    display: 'cxygg',
   },
   {
     name: 'shared',

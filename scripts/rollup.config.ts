@@ -2,8 +2,13 @@ import type { RollupOptions, OutputOptions } from 'rollup'
 import type { Options as ESBuildOptions } from 'rollup-plugin-esbuild'
 import { packages } from '../meta/packages'
 import esbuild from 'rollup-plugin-esbuild'
+import dts from 'rollup-plugin-dts'
 import json from '@rollup/plugin-json'
 const esbuildPlugin = esbuild()
+const dtsPlugin = [
+  dts(),
+]
+
 const esbuildMinifer = (options: ESBuildOptions) => {
   const { renderChunk } = esbuild(options)
 
@@ -14,17 +19,17 @@ const esbuildMinifer = (options: ESBuildOptions) => {
 }
 
 const configs: RollupOptions[] = []
-for (const { name, mjs, cjs, iife, build, globals, target } of packages) {
+for (const { name, mjs, cjs, iife, build, globals, target, dts } of packages) {
   if (build === false)
     continue
 
   const iifeGlobals = {
-    '@saga/shared': 'Saga',
-    '@saga/core': 'Saga',
+    '@cxygg/shared': 'cxygg',
+    '@cxygg/core': 'cxygg',
     ...(globals || {}),
   }
 
-  const iifeName = 'Saga'
+  const iifeName = 'cxygg'
   const functionNames = ['index']
   for (const fn of functionNames) {
     const input = `packages/${name}/index.ts`
@@ -76,7 +81,16 @@ for (const { name, mjs, cjs, iife, build, globals, target } of packages) {
         json(),
       ],
     })
-    console.log(input)
+    if (dts !== false) {
+      configs.push({
+        input,
+        output: {
+          file: `packages/${name}/dist/${fn}.d.ts`,
+          format: 'es',
+        },
+        plugins: dtsPlugin,
+      })
+    }
 
   }
 }
