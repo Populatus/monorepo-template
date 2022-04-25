@@ -1,3 +1,5 @@
 export function log() {
-  console.log('log')
+  // eslint-disable-next-line no-console
+  console.log('log');
 }
+export default log;

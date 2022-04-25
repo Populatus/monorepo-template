@@ -41,4 +41,4 @@ export const packages: PackageManifest[] = [
     name: 'shared',
     display: 'Shared',
   },
-]
+];

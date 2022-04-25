@@ -1,10 +1,11 @@
 {
   "name": "@cxygg/monorepo",
-  "version": "1.0.0",
   "description": "",
   "private": true,
   "scripts": {
     "preinstall": "pnpx only-allow pnpm",
+    "lint": "eslint --ext=.js,.ts .",
+    "lint:fix": "nr lint --fix",
     "start": "nr start --filter '*'",
     "prepare": "husky-install",
     "build": "nr update && esno scripts/build.ts",
@@ -17,20 +18,35 @@
     "release:only": "changeset publish --registry=https://registry.npmjs.com/",
     "publish": "esno scripts/publish.ts"
   },
+  "lint-staged": {
+    "{packages,scripts,meta}/**/*.{js,ts,md}": [
+      "eslint --fix"
+    ]
+  },
   "keywords": [],
-  "author": "",
+  "author": "cxygg <https://github.com/cxygg>",
   "license": "MIT",
   "devDependencies": {
     "@changesets/cli": "^2.22.0",
     "@rollup/plugin-json": "^4.1.0",
     "@types/fs-extra": "^9.0.13",
+    "@typescript-eslint/eslint-plugin": "^5.20.0",
+    "@typescript-eslint/parser": "^5.20.0",
     "consola": "^2.15.3",
     "esbuild": "^0.14.37",
     "esbuild-register": "^3.3.2",
+    "eslint": "^8.14.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-prettier": "^4.0.0",
     "esno": "^0.14.1",
     "fs-extra": "^10.1.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.8",
+    "prettier": "^2.6.2",
     "rimraf": "^3.0.2",
     "rollup": "^2.70.2",
     "rollup-plugin-dts": "^4.2.1",

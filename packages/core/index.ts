@@ -1,2 +1,2 @@
-export * from './useAdd'
-export * from './useSub'
+export * from './useAdd';
+export * from './useSub';

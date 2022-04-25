@@ -1,3 +1,3 @@
-export * from '../core/useAdd'
-export * from '../core/useSub'
-export * from '../shared/print'
+export * from '@cxygg/core/useAdd/useAdd';
+export * from '@cxygg/core/useSub/useSub';
+export * from '@cxygg/shared/print/print';

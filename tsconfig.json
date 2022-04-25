@@ -16,7 +16,6 @@
     "resolveJsonModule": true,
     "rootDir": "./",
     "baseUrl": "./",
-    "jsx": "preserve",
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "noUnusedLocals": true,
@@ -39,7 +38,7 @@
     ]
   },
   "include": [
-    "packages",
+    "packages/**/*",
   ],
   "exclude": [
     "node_modules",
