@@ -1,6 +1,6 @@
 {
   "name": "@cxygg/monorepo",
-  "description": "-",
+  "description": "--",
   "private": true,
   "scripts": {
     "preinstall": "pnpx only-allow pnpm",
